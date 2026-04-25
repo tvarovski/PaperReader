@@ -1,0 +1,6 @@
+.paper-reader-term {
+    color: #0056b3; /* A nice blue color */
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: help;
+}

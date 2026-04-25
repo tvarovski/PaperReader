@@ -1,15 +1,20 @@
 {
-    "name": "Reader ",
+    "name": "Paper Reader",
     "description": "Helps Reading Abbreviations in Scientific Papers!",
     "version": "1.0",
-    "manifest_version": 2,
-
-    "content_scripts": [
-      {
-        "run_at": "document_end",
-        "matches": ["<all_urls>"],
-        "js": ["jquery-2.2.0.min.js","bootstrap.bundle.min.js","content.js"],
-        "css": ["bootstrap.min.css"]
-      }
-    ]
-  }
+    "manifest_version": 3,
+    "permissions": [
+        "scripting",
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_title": "Analyze Paper"
+    },
+    "web_accessible_resources": [{
+        "resources": ["bootstrap.min.css", "styles.css"],
+        "matches": ["<all_urls>"]
+    }]
+}
