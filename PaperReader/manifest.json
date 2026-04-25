@@ -3,13 +3,23 @@
     "description": "Helps Reading Abbreviations in Scientific Papers!",
     "version": "1.0",
     "manifest_version": 3,
-    "permissions": [
-        "scripting",
-        "activeTab"
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "css": [
+                "bootstrap.min.css",
+                "styles.css"
+            ],
+            "js": [
+                "jquery-2.2.0.min.js",
+                "bootstrap.bundle.min.js",
+                "content.js"
+            ]
+        }
     ],
-    "background": {
-        "service_worker": "background.js"
-    },
     "action": {
         "default_title": "Analyze Paper"
     },
